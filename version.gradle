@@ -1,21 +1,13 @@
 ext {
     versions = [
             'spring'         : '3.3.2',
+            'mockmvc'        : '3.0.1',
             'springdoc'      : '1.8.0',
             'liquibase'      : '4.29.1',
-            'postgresql'     : '42.7.3',
-            'tomcat'         : '10.1.25', // don't change
-            'jetbrains'      : '24.1.0',
             'mapstruct'      : '1.6.0.RC1',
-            'mockmvc'        : '3.0.1',
-            'jupiter'        : '1.20.1',
-            'security'       : '1.5.3.Final',
-            'junit'       : '1.11.0-RC1',
-            'springsecurity6': '3.1.2.RELEASE',
-            'securitytest'   : '6.3.1',
-            'compress'       : '1.26.2',
             'lombok'         : '1.18.34',
-            'jakarta'        : '3.2.0',
-            'google'         : '1.23.0'
+            'postgresql'     : '42.7.3',
+            'jetbrains'      : '24.1.0',
+            'junit'       : '1.11.0-RC1'
     ]
 }

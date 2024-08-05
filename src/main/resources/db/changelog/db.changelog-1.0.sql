@@ -1,4 +1,4 @@
---changeset stell:2
+--changeset stell:1
 CREATE TABLE IF NOT EXISTS users
 (
     id       BIGSERIAL PRIMARY KEY,
@@ -33,8 +33,8 @@ CREATE TABLE IF NOT EXISTS users_tasks
 --changeset stell:4
 CREATE TABLE IF NOT EXISTS users_roles
 (
-    user_id BIGINT       NOT NULL,
-    role    VARCHAR(255) NOT NULL,
+    user_id BIGINT      NOT NULL,
+    role    VARCHAR(50) NOT NULL,
     PRIMARY KEY (user_id, role),
     CONSTRAINT fk_users_roles_users FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE ON UPDATE NO ACTION
 );
