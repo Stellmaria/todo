@@ -1,5 +1,3 @@
---liquibase formatted sql
-
 --changeset stell:1
 CREATE TABLE IF NOT EXISTS users
 (

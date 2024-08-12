@@ -1,12 +1,9 @@
 package org.lib.todo.entity.task;
 
-import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
-import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,14 +11,17 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
-import java.util.Collection;
 
+@Entity
 @Getter
 @Setter
-@Entity
+@ToString
+@RequiredArgsConstructor
 @Table(name = "tasks")
 public class Task {
     @Id
@@ -43,9 +43,4 @@ public class Task {
 
     @Column(name = "expiration_date")
     private LocalDateTime expirationDate;
-
-    @Column(name = "image")
-    @CollectionTable(name = "tasks_images")
-    @ElementCollection(fetch = FetchType.EAGER)
-    private Collection<String> images;
 }
